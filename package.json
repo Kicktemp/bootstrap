@@ -45,6 +45,7 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
     "browser-sync": "^2.26.3",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "gulp": "^3.9.1",
     "require-dir": "^1.2.0",
     "run-sequence": "^2.2.1",
@@ -53,7 +54,9 @@
     "webpack-config-utils": "^2.3.1",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3",
-    "webpack-merge": "^4.1.5"
+    "webpack-merge": "^4.1.5",
+    "webpack-stylish": "^0.1.8",
+    "webpackbar": "^3.1.4"
   },
   "engines": {
     "node": ">=7.6.0"

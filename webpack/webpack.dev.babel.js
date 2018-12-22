@@ -1,4 +1,6 @@
 import webpack from 'webpack'
+import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin'
+
 const merge = require('webpack-merge')
 const utils = require('./utils')
 const baseWebpackConfig = require('./webpack.config.base.babel.js')
@@ -21,7 +23,6 @@ let entries = utils.entryPoints
 
 Object.keys(entries).forEach((entry) => entries[entry] = [hotClient].concat(entries[entry]))
 
-
 const devWebpackConfig = merge(baseWebpackConfig.default, {
   mode: 'development',
   devtool: 'eval-source-map',
@@ -32,7 +33,9 @@ const devWebpackConfig = merge(baseWebpackConfig.default, {
     chunkFilename: utils.assetsPath('js/chunks/[name].js')
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new FriendlyErrorsWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ]
 })
 
