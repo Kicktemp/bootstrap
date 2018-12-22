@@ -1,0 +1,37 @@
+{
+  "name": "JoomlaBootstrap",
+  "version": "1.0.0",
+  "description": "Twitter Bootstrap Joomla Kicktemp Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Kicktemp/bootstrap.git"
+  },
+  "keywords": [
+    "Joomla",
+    "Twitter",
+    "Boostrap",
+    "Kicktemp",
+    "Webpack",
+    "Lazy",
+    "Load",
+    "Gulp",
+    "NPM",
+    "Bootstrap",
+    "4"
+  ],
+  "author": "Niels Nübel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kicktemp/bootstrap/issues"
+  },
+  "homepage": "https://github.com/Kicktemp/bootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6"
+  }
+}
