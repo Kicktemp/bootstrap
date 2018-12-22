@@ -1,12 +1,8 @@
-import path from 'path'
-
+const merge = require('webpack-merge')
 const utils = require('./utils')
+const baseWebpackConfig = require('./webpack.config.base.babel.js')
 
-const prodWebpackConfig = {
-  entry: utils.entryPoints,
-  output: {
-    path: utils.paths.PUBLIC_PATH
-  }
-}
+const prodWebpackConfig = merge(baseWebpackConfig.default, {
+})
 
 module.exports = prodWebpackConfig
