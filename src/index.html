@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+Hallo
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { if (!chunk.match(/font/)) { %>
+<script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>" defer></script>
+<% }} %>
+</body>
+</html>

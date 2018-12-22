@@ -8,6 +8,7 @@ import path from 'path'
 import webpack from 'webpack'
 import WebpackBar from 'webpackbar'
 import Stylish from 'webpack-stylish'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const utils = require('./utils')
 
@@ -42,6 +43,12 @@ export default {
         },
         exclude: /node_modules/,
         include: utils.resolve(utils.kicktempConf.src.base)
+      },
+      {
+        test: /\.(js)$/,
+        use: 'babel-loader',
+        exclude: /node_modules/,
+        include: utils.resolve(utils.kicktempConf.src.base)
       }
     ]
   },
@@ -49,5 +56,17 @@ export default {
     new webpack.NamedModulesPlugin(),
     new WebpackBar(),
     new Stylish(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(nodeEnv)
+      }
+    }),
+    new HtmlWebpackPlugin({
+      filename: path.resolve(`${utils.kicktempConf.dist.templates}/index.html`),
+      template: utils.kicktempConf.src.structure + 'index.html',
+      inject: false,
+      hash: false,
+      chunksSortMode: 'dependency'
+    })
   ])
 }
