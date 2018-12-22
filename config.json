@@ -1,5 +1,7 @@
 {
   "dist": {
+    "browserSyncDir": "dist/",
+    "js": "dist/assets/js/",
     "webpackassets": "assets/",
     "webpackpublic": "dist/"
   },
@@ -7,5 +9,11 @@
     "jsEntryPoints": {
       "main": "./src/js/main.js"
     }
+  },
+  "browsersync": {
+    "openbrowser": false,
+    "port": 3000,
+    "https": false,
+    "proxy": "http://bootstrap.kick"
   }
 }
