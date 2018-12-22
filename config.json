@@ -8,7 +8,7 @@
   },
   "src": {
     "base": "src/",
-    "structure": "src/",
+    "structure": "src/structure/",
     "jsEntryPoints": {
       "main": "./src/js/main.js"
     }
@@ -18,5 +18,14 @@
     "port": 3000,
     "https": false,
     "proxy": "http://bootstrap.kick"
-  }
+  },
+  "copyfiles": [
+    {
+      "src": "src/structure/",
+      "dest": "dist/"
+    }
+  ],
+  "watchfiles": [
+    "src/structure/**/*"
+  ]
 }

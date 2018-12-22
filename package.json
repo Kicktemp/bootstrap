@@ -4,8 +4,10 @@
   "description": "Twitter Bootstrap Joomla Kicktemp Project",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --config=webpack/webpack.prod.babel.js -p --colors --mode=production",
-    "dev": "cross-env NODE_ENV=development gulp"
+    "build": "cross-env NODE_ENV=production npm run subtask:buildgulp && cross-env NODE_ENV=production npm run subtask:bundlewebpack",
+    "dev": "cross-env NODE_ENV=development gulp",
+    "subtask:buildgulp": "gulp build --env=production",
+    "subtask:bundlewebpack": "cross-env NODE_ENV=production webpack --config=webpack/webpack.prod.babel.js -p --colors --mode=production"
   },
   "repository": {
     "type": "git",
@@ -59,6 +61,10 @@
     "eslint-plugin-standard": "^4.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "gulp": "^3.9.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.1",
     "html-webpack-plugin": "^3.2.0",
     "require-dir": "^1.2.0",
     "run-sequence": "^2.2.1",

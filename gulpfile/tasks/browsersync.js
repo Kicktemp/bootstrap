@@ -78,7 +78,8 @@ const browserSyncTask = () => {
       https: kt.browsersync.https,
       open: kt.browsersync.openbrowser,
       files: [
-        `${kt.dist.js}**/*.js`
+        `${kt.dist.js}**/*.js`,
+        `${kt.dist.templates}**/*.{html,php}`
       ]
     }
   );
