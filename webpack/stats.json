@@ -4,9 +4,9 @@
   "warnings": [
   ],
   "version": "4.28.1",
-  "hash": "33d27768f7ea8e83e559",
-  "time": 133,
-  "builtAt": 1545514082294,
+  "hash": "3493940fa155ce3c9ccb",
+  "time": 950,
+  "builtAt": 1545515365393,
   "publicPath": "/",
   "outputPath": "/Users/niels/Development/kicktemp/bootstrap/dist/",
   "assetsByChunkName": {
@@ -15,7 +15,7 @@
   "assets": [
     {
       "name": "assets/js/main.js",
-      "size": 981,
+      "size": 983,
       "chunks": [
         0
       ],
@@ -60,14 +60,14 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 14,
+      "size": 17,
       "names": [
         "main"
       ],
       "files": [
         "assets/js/main.js"
       ],
-      "hash": "119684bd36681b844205",
+      "hash": "2414b84de8929df5f995",
       "siblings": [
       ],
       "parents": [
@@ -79,11 +79,11 @@
       "modules": [
         {
           "id": "./src/js/main.js",
-          "identifier": "/Users/niels/Development/kicktemp/bootstrap/src/js/main.js",
+          "identifier": "/Users/niels/Development/kicktemp/bootstrap/node_modules/eslint-loader/index.js??ref--4!/Users/niels/Development/kicktemp/bootstrap/src/js/main.js",
           "name": "./src/js/main.js",
           "index": 0,
           "index2": 0,
-          "size": 14,
+          "size": 17,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -117,7 +117,7 @@
             "ModuleConcatenation bailout: Module is not an ECMAScript module"
           ],
           "depth": 0,
-          "source": "alert('Niels')"
+          "source": "alert('Niels22')\n"
         }
       ],
       "filteredModules": 0,
@@ -137,11 +137,11 @@
   "modules": [
     {
       "id": "./src/js/main.js",
-      "identifier": "/Users/niels/Development/kicktemp/bootstrap/src/js/main.js",
+      "identifier": "/Users/niels/Development/kicktemp/bootstrap/node_modules/eslint-loader/index.js??ref--4!/Users/niels/Development/kicktemp/bootstrap/src/js/main.js",
       "name": "./src/js/main.js",
       "index": 0,
       "index2": 0,
-      "size": 14,
+      "size": 17,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -175,7 +175,7 @@
         "ModuleConcatenation bailout: Module is not an ECMAScript module"
       ],
       "depth": 0,
-      "source": "alert('Niels')"
+      "source": "alert('Niels22')\n"
     }
   ],
   "filteredModules": 0,

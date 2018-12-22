@@ -6,6 +6,7 @@
     "webpackpublic": "dist/"
   },
   "src": {
+    "base": "src/",
     "jsEntryPoints": {
       "main": "./src/js/main.js"
     }
