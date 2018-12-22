@@ -6,6 +6,12 @@
 import kt from '../../config.json'
 import gulp from 'gulp'
 import browserSync from 'browser-sync'
+import webpack from 'webpack'
+import webpackDevMiddleware from 'webpack-dev-middleware'
+import webpackHotMiddleware from 'webpack-hot-middleware'
+import webpackSettings from '../../webpack/webpack.dev.babel'
+
+const bundler = webpack(webpackSettings)
 
 const browserSyncTask = () => {
   // Build a condition when Proxy is active
@@ -29,6 +35,18 @@ const browserSyncTask = () => {
       debugInfo: true,
       watchTask: true,
       proxy: bsProxy,
+
+     middleware: [
+      webpackDevMiddleware(bundler, {
+        quiet: true,
+        logLevel: 'warn',
+        publicPath: webpackSettings.output.publicPath,
+        stats: { colors: true }
+      }),
+      webpackHotMiddleware(bundler, {
+        log: () => {}
+      })
+    ],
 
       ghostMode: {
         clicks: true,
