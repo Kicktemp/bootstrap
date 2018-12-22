@@ -1,0 +1,10 @@
+{
+  "dist": {
+    "webpackpublic": "dist/"
+  },
+  "src": {
+    "jsEntryPoints": {
+      "main": "./src/js/main.js"
+    }
+  }
+}

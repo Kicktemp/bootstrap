@@ -4,7 +4,7 @@
   "description": "Twitter Bootstrap Joomla Kicktemp Project",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack/prod.config.js"
+    "build": "webpack --config=webpack/webpack.prod.babel.js -p --colors --mode=production"
   },
   "repository": {
     "type": "git",
@@ -30,13 +30,23 @@
   },
   "homepage": "https://github.com/Kicktemp/bootstrap#readme",
   "dependencies": {
+    "@babel/cli": "^7.2.3",
     "bootstrap": "^4.2.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
     "webpack": "^4.28.1",
-    "webpack-cli": "^3.1.2",
+    "webpack-cli": "^3.0.5",
     "webpack-config-utils": "^2.3.1"
+  },
+  "engines": {
+    "node": ">=7.6.0"
   }
 }
