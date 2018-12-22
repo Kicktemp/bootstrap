@@ -11,6 +11,13 @@ import Stylish from 'webpack-stylish'
 
 const utils = require('./utils')
 
+const nodeEnv = process.env.NODE_ENV || 'production'
+
+const {
+  ifProduction,
+  ifDevelopment
+} = utils.getIfUtils(nodeEnv)
+
 /*
  |--------------------------------------------------------------------------
  | Let the config begin
@@ -19,6 +26,7 @@ const utils = require('./utils')
 export default {
   entry: utils.removeEmpty(utils.entryPoints),
   output: {
+    pathinfo: ifDevelopment(true, false),
     path: utils.paths.PUBLIC_PATH
   },
   stats: 'none',

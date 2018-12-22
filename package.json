@@ -4,8 +4,8 @@
   "description": "Twitter Bootstrap Joomla Kicktemp Project",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config=webpack/webpack.prod.babel.js -p --colors --mode=production",
-    "dev": "gulp"
+    "build": "cross-env NODE_ENV=production webpack --config=webpack/webpack.prod.babel.js -p --colors --mode=production",
+    "dev": "cross-env NODE_ENV=development gulp"
   },
   "repository": {
     "type": "git",
@@ -45,6 +45,7 @@
     "@babel/register": "^7.0.0",
     "browser-sync": "^2.26.3",
     "clean-webpack-plugin": "^1.0.0",
+    "cross-env": "^5.2.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "gulp": "^3.9.1",
     "require-dir": "^1.2.0",
