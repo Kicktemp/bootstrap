@@ -1,5 +1,6 @@
 {
   "dist": {
+    "webpackassets": "assets/",
     "webpackpublic": "dist/"
   },
   "src": {

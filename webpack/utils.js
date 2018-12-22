@@ -16,6 +16,7 @@ exports.entryPoints = kicktempConf.src.jsEntryPoints
 const paths = {}
 paths.ROOT_PATH = path.resolve(__dirname, '..')
 paths.PUBLIC_PATH = path.join(paths.ROOT_PATH, kicktempConf.dist.webpackpublic)
+paths.ASSETS_PATH = kicktempConf.dist.webpackassets
 exports.paths = paths
 
 /*
