@@ -4,7 +4,7 @@
   "description": "Twitter Bootstrap Joomla Kicktemp Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack/prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -33,5 +33,10 @@
     "bootstrap": "^4.2.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6"
+  },
+  "devDependencies": {
+    "webpack": "^4.28.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-config-utils": "^2.3.1"
   }
 }
