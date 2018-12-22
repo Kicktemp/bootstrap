@@ -25,6 +25,7 @@ Object.keys(entries).forEach((entry) => entries[entry] = [hotClient].concat(entr
 const devWebpackConfig = merge(baseWebpackConfig.default, {
   mode: 'development',
   devtool: 'eval-source-map',
+  entry: utils.removeEmpty(entries),
   output: {
     publicPath: '/',
     filename: utils.assetsPath('js/[name].js'),
