@@ -21,6 +21,13 @@
     "https": false,
     "proxy": "http://bootstrap.kick"
   },
+  "minify": {
+    "javascript": {
+      "options": {
+        "mangle": false
+      }
+    }
+  },
   "copyfiles": [
     {
       "src": "src/structure/",

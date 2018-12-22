@@ -16,6 +16,13 @@ const buildTask = (cb) => {
     [
       'copy:files'
     ],
+    [
+      'compiler:css'
+    ],
+    [
+      'minify:js',
+      'minify:css'
+    ],
     cb)
 }
 
