@@ -3,11 +3,13 @@
     "browserSyncDir": "dist/",
     "js": "dist/assets/js/",
     "templates": "dist/",
+    "css": "dist/assets/css/",
     "webpackassets": "assets/",
     "webpackpublic": "dist/"
   },
   "src": {
     "base": "src/",
+    "style": "src/style/",
     "structure": "src/structure/",
     "jsEntryPoints": {
       "main": "./src/js/main.js"

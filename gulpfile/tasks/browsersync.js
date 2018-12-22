@@ -79,6 +79,7 @@ const browserSyncTask = () => {
       open: kt.browsersync.openbrowser,
       files: [
         `${kt.dist.js}**/*.js`,
+        `${kt.dist.css}**/*.css`,
         `${kt.dist.templates}**/*.{html,php}`
       ]
     }
