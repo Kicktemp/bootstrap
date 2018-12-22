@@ -31,6 +31,15 @@ export default {
     path: utils.paths.PUBLIC_PATH
   },
   stats: 'none',
+  resolve: {
+    extensions: [
+      '.js'
+    ],
+    modules: [utils.resolve(utils.kicktempConf.src.base), utils.resolve('node_modules')],
+    alias: {
+      src: utils.resolve(utils.kicktempConf.src.base)
+    }
+  },
   module: {
     rules: [
       {
