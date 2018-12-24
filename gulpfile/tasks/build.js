@@ -14,6 +14,9 @@ const buildTask = (cb) => {
 
   runSequence(
     [
+      'version:bump',
+    ],
+    [
       'copy:files'
     ],
     [
